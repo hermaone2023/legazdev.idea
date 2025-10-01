@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Private Programming - Landing Page</title>
+  <meta name="description" content="Private Programming — Belajar langsung membuat aplikasi sesuai ide Anda dengan mentor pribadi." />
+  <style>
+    :root{
+      --accent: #0ea5a4;
+      --dark: #0f172a;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f8fafc;
+      --maxw:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--dark);}
+    .container{max-width:var(--maxw);margin:0 auto;padding:20px;}
+
+    header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center;flex:1}
+    .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#0369a1);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav{flex:1;text-align:right}
+    nav a{margin-left:16px;color:var(--muted);text-decoration:none}
+    nav a.cta{background:var(--accent);color:white;padding:8px 12px;border-radius:8px}
+
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:22px}
+    .hero .eyebrow{color:var(--accent);font-weight:600}
+    h1{font-size:36px;margin:10px 0 6px;line-height:1.05}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .features-list{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+    .feature{display:flex;gap:12px;align-items:flex-start}
+    .feature .ico{width:36px;height:36px;border-radius:8px;background:var(--card);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+
+    .cta-box{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 24px rgba(2,6,23,0.06)}
+    .price{font-size:24px;font-weight:700;color:var(--dark)}
+    .muted{color:var(--muted);font-size:14px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;text-align:center}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{border:1px solid rgba(15,23,42,0.1);background:transparent;color:var(--dark)}
+
+    section{margin-top:40px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.04)}
+
+    footer{margin-top:48px;padding:24px 0;color:var(--muted);text-align:center}
+
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .grid-3{grid-template-columns:1fr;}
+      nav a{display:inline-block;margin:8px 6px;}
+    }
+    @media (max-width:600px){
+      h1{font-size:28px;}
+      .price{font-size:20px;}
+      .btn{padding:8px 12px;font-size:14px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">LD</div>
+        <div>
+          <div style="font-weight:700">Private Programming</div>
+          <div style="font-size:12px;color:var(--muted)">Mentors: <span>Hermawan, ST - Founder Legazdev.idea</span></div>
+        </div>
+      </div>
+      <nav>
+        <a href="#how">Cara Kerjas</a>
+        <a href="#benefit">Keunggulan</a>
+        <a class="cta" href="#contact">Daftar</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">PRIVAT KODING — 1:1 MENTOR</div>
+          <h1>Belajar langsung membuat aplikasi sesuai ide Anda</h1>
+          <p class="lead">Bukan sekadar teori. Dalam setiap sesi, kita akan membuat fitur nyata dari aplikasi Anda — step-by-step bersama mentor sampai prototype berjalan.</p>
+
+          <div class="features-list">
+            <div class="feature"><div class="ico">✓</div><div><strong>Langsung ke proyek</strong><div class="muted">Pelajari kode yang diperlukan untuk fitur aplikasi Anda.</div></div></div>
+            <div class="feature"><div class="ico">👨‍🏫</div><div><strong>Panduan personal</strong><div class="muted">Mentor mendampingi progress dan menyesuaikan kecepatan belajar.</div></div></div>
+            <div class="feature"><div class="ico">⚡</div><div><strong>Efisien & praktis</strong><div class="muted">Prototype aplikasi bisa jadi setelah beberapa sesi.</div></div></div>
+          </div>
+
+          <div style="margin-top:18px">
+            <a class="btn btn-primary" href="#contact">Mulai Diskusi</a>
+            <a class="btn btn-ghost" href="#how" style="margin-left:10px">Lihat Cara Kerja</a>
+          </div>
+        </div>
+
+        <aside class="cta-box">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div>
+              <div class="muted">Investasi (per paket)</div>
+              <div class="price" id="price">Rp [HARGA]</div>
+              <div class="muted" style="margin-top:6px">Durasi & detail paket bisa disesuaikan</div>
+            </div>
+            <div>
+              <div class="muted">Kapasitas</div>
+              <div style="font-weight:700">1 peserta (private)</div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px">
+            <a href="#contact" class="btn btn-primary">Daftar Sekarang</a>
+            <a id="whatsapp-btn" href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20daftar%20private%20programming" class="btn btn-ghost">Chat WA</a>
+          </div>
+
+          <div style="margin-top:10px;font-size:13px;color:var(--muted)">* Harga dapat disesuaikan sesuai paket.</div>
+        </aside>
+      </section>
+
+      <section id="benefit">
+        <h2>Kenapa memilih private ini?</h2>
+        <div class="grid-3" style="margin-top:12px">
+          <div class="card">
+            <strong>Hasil nyata</strong>
+            <p class="muted">Setiap sesi diarahkan untuk menghasilkan fitur aplikasi.</p>
+          </div>
+          <div class="card">
+            <strong>Belajar sesuai kebutuhan</strong>
+            <p class="muted">Anda tentukan ide dan fitur, mentor membantu teknisnya.</p>
+          </div>
+          <div class="card">
+            <strong>Fleksibilitas</strong>
+            <p class="muted">Jadwal & durasi bisa menyesuaikan.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="how">
+        <h2>Bagaimana cara kerjanya?</h2>
+        <ol style="margin-top:12px">
+          <li>Pilih ide aplikasi yang ingin dibuat.</li>
+          <li>Diskusikan fitur & teknologi.</li>
+          <li>Mulai sesi coding bersama mentor.</li>
+          <li>Review & perbaikan kode.</li>
+          <li>Selesai: Anda memiliki prototype nyata.</li>
+        </ol>
+      </section>
+
+      <section id="contact">
+        <h2>Daftar / Konsultasi</h2>
+        <div class="card" style="margin-top:12px">
+          <form id="contact-form">
+            <label>Nama Lengkap</label>
+            <input type="text" id="name" placeholder="Nama Anda" style="width:100%;padding:10px;border-radius:8px;border:1px solid #ddd;margin-bottom:10px" required>
+
+            <label>Email / WA</label>
+            <input type="text" id="contact-input" placeholder="email@contoh.com / 0812xxxx" style="width:100%;padding:10px;border-radius:8px;border:1px solid #ddd;margin-bottom:10px" required>
+
+            <label>Singkat Ide Aplikasi</label>
+            <textarea id="idea" placeholder="Contoh: Aplikasi pemesanan donor darah" style="width:100%;padding:10px;border-radius:8px;border:1px solid #ddd;margin-bottom:12px" rows="3"></textarea>
+
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <button type="button" class="btn btn-primary" id="submit-btn">Kirim & Konsultasi</button>
+              <button type="reset" class="btn btn-ghost">Reset</button>
+            </div>
+          </form>
+          <div id="form-result" style="margin-top:12px;color:var(--muted)"></div>
+        </div>
+      </section>
+
+      <footer>
+        &copy; <span id="year">2025</span> Private Programming • Dibuat oleh <strong id="mentor-footer">[Nama Asnda]</strong>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    const CONFIG = {
+      mentorName: '[Nama Anda]',
+      contactPhone: '081234567890',
+      contactWhatsAppUrl: 'https://wa.me/6281234567890?text=Halo%20saya%20ingin%20konsultasi%20private%20programming',
+      contactEmail: 'email@contoh.com',
+      priceLabel: 'Rp 2.500.000 / paket (contoh)',
+    };
+
+    document.getElementById('mentor-name').textContent = CONFIG.mentorName;
+    document.getElementById('mentor-footer').textContent = CONFIG.mentorName;
+    document.getElementById('price').textContent = CONFIG.priceLabel;
+    document.getElementById('whatsapp-btn').href = CONFIG.contactWhatsAppUrl;
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('submit-btn').addEventListener('click', function(){
+      const name = encodeURIComponent(document.getElementById('name').value || 'Nama');
+      const contact = encodeURIComponent(document.getElementById('contact-input').value || 'Kontak');
+      const idea = encodeURIComponent(document.getElementById('idea').value || '-');
+      const msg = `Halo, saya tertarik private programming.%0ANama:%20${name}%0AKontak:%20${contact}%0AIde:%20${idea}`;
+      const wa = CONFIG.contactWhatsAppUrl.split('?')[0] + '?text=' + msg;
+      window.open(wa, '_blank');
+      document.getElementById('form-result').textContent = 'Membuka WhatsApp untuk mengirim detail.';
+    });
+  </script>
+</body>
+</html>
